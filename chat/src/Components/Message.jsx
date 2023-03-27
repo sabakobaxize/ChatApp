@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Message = () => {
+const Message = ({message}) => {
   return (
     <div>
         <div className="MessageDiv">
-            <p className='User-Name'>Dave</p>
-            <p>Im Learning React and Firebase</p>
+            <p className='User-Name'>David</p>
+            <p>{message.text}</p>
+            
         </div>
     </div>
   )
