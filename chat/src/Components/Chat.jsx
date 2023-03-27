@@ -21,22 +21,19 @@ const Chat = () => {
     return () => unsubscribe();
   }, []);
 
-  return (
+   return (
     <>
-    <main className='MainForChat'>
-     {/* Chat Message Component */}
-
-     {messages &&
-      messages.map((message) => (
-         <Message  key={message.id} message={message} />
-     ))}
-    
-    </main>
-    {/* Send Message Component */}
-    <SendMessage />
-    <span ref={scroll}></span>
+      <main className={style.main}>
+        {messages &&
+          messages.map((message) => (
+            <Message key={message.id} message={message} />
+          ))}
+      </main>
+      {/* Send Message Compoenent */}
+      <SendMessage scroll={scroll} />
+      <span ref={scroll}></span>
     </>
-  )
+  );
 }
 
 export default Chat
