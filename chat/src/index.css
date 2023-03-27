@@ -42,8 +42,9 @@ padding-left: 0.75rem;
 border-top-left-radius: 9999px; 
 }
 .User-Name{
-    margin-top: -4rem;
-    color: #718096; 
+    position: absolute;
+    margin-top: -5rem;
+    color: #78767e; 
     font-size: .75rem; 
 }
 .Sent{
@@ -53,20 +54,30 @@ flex-direction: row-reverse;
 text-align: end;
 float: right;
 border-bottom-left-radius: 9999px; 
+border-top-right-radius: 9999px; 
+min-width: 100px;
+max-width: 250px;
+margin-top: 10px;
+height: fit-content;
 }
 .Received{
     background-color: #e5e5ea;
     color: black;
     float: left;
     border-bottom-right-radius: 9999px; 
+    border-top-right-radius: 9999px; 
+    border-top-left-radius: 9999px; 
+    min-width: 100px;
+    max-width: 250px;
 }
 .SendMassageForm{
+    
     display: flex;
     height: 3.5rem;
     width: 100%; 
     max-width: 99%;
     font-size: 1.25rem;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 .MessageInput{
