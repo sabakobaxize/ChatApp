@@ -6,23 +6,20 @@ import SendMessage from './SendMessage';
 
 
 const Chat = () => {
-    const [messages, setMessages] = useState([]);
-    const scroll = useRef() 
+     const [messages, setMessages] = useState([]);
+  const scroll = useRef();
 
-
-useEffect(() => {
-const q  = query(collection(db,'Messages'),orderBy('TimeStamp'))
-const unsubscribe = onSnapshot(q, (querySnapshot) =>{
-    let messages = []
-    console.log(querySnapshot)
- querySnapshot.forEach((doc) => {
-        messages.push({...doc.data(), id: doc.id })
-    
+  useEffect(() => {
+    const q = query(collection(db,'Messages'),orderBy('TimeStamp'));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      let messages = [];
+      querySnapshot.forEach((doc) => {
+        messages.push({ ...doc.data(), id: doc.id });
+      });
+      setMessages(messages);
     });
-    setMessages(messages)
-})
-return () => unsubscribe();
-},[])
+    return () => unsubscribe();
+  }, []);
 
   return (
     <>
