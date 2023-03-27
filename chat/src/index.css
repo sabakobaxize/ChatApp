@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbardiv{
+    background-color: rgb(32, 33, 44) ;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.navbar-Heading{
+    color: white;
+    font-size:40px;
+}
+.logout{
+    background-color: gray;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem; 
+    padding-bottom: 0.5rem;
+}
+.logout:hover{
+    background-color: rgb(160, 157, 157);
+}
+.MainForChat{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.MessageDiv{
+display: flex;
+align-items: center;
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+margin: 1rem;
+padding-top: 0.5rem; 
+padding-bottom: 0.5rem;
+padding-right: 0.75rem; 
+padding-left: 0.75rem; 
+border-top-left-radius: 9999px; 
+}
+.User-Name{
+    margin-top: -4rem;
+    color: #718096; 
+    font-size: .75rem; 
+}
+.Sent{
+background-color: #395dff;
+color: white;
+flex-direction: row-reverse;
+text-align: end;
+float: right;
+border-bottom-left-radius: 9999px; 
+}
+.Received{
+    background-color: #e5e5ea;
+    color: black;
+    float: left;
+    border-bottom-right-radius: 9999px; 
+}
